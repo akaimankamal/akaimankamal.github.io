@@ -1,0 +1,119 @@
+body {
+    background-color: #251671;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+/* header section */
+.padding {
+    padding-top: 1rem;
+}
+h1 {
+    color: #6454ac;
+}
+h4 {
+    background-color: #6454ac;
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #251671;
+}
+/* game board */
+#board div {
+    float: left;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border: solid 3px #62727b;
+    display: inline-block;
+    margin: 4px;
+    font-size: 3em;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+
+    background-color: #37474f;
+    border-radius: 20%;
+    color: #ff616f;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+#board div:nth-child(3n+1) {
+    clear: both;
+}
+.box:hover {
+    animation: jelly 0.5s;
+}
+@keyframes jelly {
+    0%,
+    100% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(0.9, 1.1);
+    }
+    50% {
+      transform: scale(1.1, 0.9);
+    }
+    75% {
+      transform: scale(0.95, 1.05);
+    }
+}
+/* Current state section */
+#note {
+    font-size: 2em;
+}
+/* score section */
+#score {
+    font-size: 1.5rem;
+    color: #ff616f;
+    padding-top: 1rem;
+}
+#score span {
+    font-size: 1.5rem;
+    background-color: #6454ac;
+    color: #251671;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+} 
+/* reset button */
+#reset {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #37474f;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#37474f;
+    text-align:center;
+    transition: all 0.2s;
+  
+    animation:bouncy 5s infinite linear;
+    position:relative;
+}
+#reset:hover {
+    color:#ff616f;
+    font-weight: bold;
+    background-color:#37474f;
+}
+@media all and (max-width:30em) {
+    #reset {
+      display:block;
+      margin:0.4em auto;
+    }
+}
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}

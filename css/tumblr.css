@@ -1,0 +1,14 @@
+body {
+    background-color: #102027;
+    color: #ffffff;
+}
+
+.padding {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.margin {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
